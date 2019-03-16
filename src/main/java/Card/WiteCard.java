@@ -25,9 +25,9 @@ public class WiteCard extends CustomCard {
      */
 
     //卡牌在游戏中的id
-    public static final String ID = "WiteCard";
+    public static final String ID = "WiteRelics";
     //卡牌显示的名称
-    public static final String NAME = "WiteCard";
+    public static final String NAME = "WiteRelics";
     //卡牌下方的描叙内容。
     public static final String DESCRIPTION = "Wite";
     //卡牌的费用。
