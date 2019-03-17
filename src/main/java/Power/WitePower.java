@@ -12,11 +12,11 @@ public class WitePower extends AbstractPower {
     //不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static final String DESCRIPITON = "能力描叙";
     //需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
-    public static final String[] DESCRIPTIONS = {"","",""};
+    public static final String[] DESCRIPTIONS = {"", "", ""};
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
 
     //参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
-    public WitePower(AbstractCreature owner, int amount){
+    public WitePower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;

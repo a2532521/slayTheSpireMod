@@ -15,11 +15,10 @@ import static basemod.DevConsole.logger;
 import static basemod.DevConsole.visible;
 
 //@SpireInitializer
-public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscriber,EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber,EditKeywordsSubscriber {
+public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber {
     /**
      * 以上继承6个接口，来注入人物mod所需的全部类。
      * 其中包括：Cards(卡牌)、Power(能力)、Action(动作)、relics(遗物)、KeyWord(关键字)、Character(角色)。更多接口可详参basemod。
-     *
      */
 //Mod名称。
     private static final String MODNAME = "SampleMod";
@@ -30,7 +29,7 @@ public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscrib
     //mod人物对应的颜色。getColor所需的三个参数分别对应颜色的三个色相R、G、U。查找色相请打开系统自带画图，编辑颜色窗口，右下角的RGU三栏。（仅以Win10的自带画图为例）
     private static final Color COLOR = CardHelper.getColor(0, 0, 0);
 
-    public CoreMod(){
+    public CoreMod() {
         logger.info("============================ 监听初始化事件 ============================");
         BaseMod.subscribe(this);//监听事件，确保正常注入，不可缺少。
         logger.info("============================ 监听初始化事件成功 ============================");
@@ -65,6 +64,7 @@ public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscrib
 
         logger.info("=========================加载新的卡牌内容成功=========================");
     }
+
     //人物
     public void receiveEditCharacters() {
         logger.info("========================正在注入Mod人物信息========================");
@@ -78,7 +78,7 @@ public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscrib
         //代码过长，无法展示，请详参群内的ModBaseCharacter.java-人物模板。
         //null位置对应参数：AbstractCardEnum.BLACK.toString()
         //详细解释同该类第50行。
-      //  BaseMod.addCharacter();
+        //  BaseMod.addCharacter();
         //"Mod人物名称","角色选择界面对应的摁扭图标", "人物选择界面的背景图片"
         BaseMod.addCharacter(null, "Mod人物名称", "CharacterName class string",
                 null);
@@ -92,7 +92,7 @@ public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscrib
     public void receiveEditKeywords() {
         logger.info("==========================正在注入新的关键字==========================");
 
-        BaseMod.addKeyword(new String[]{"关键字","关键字"}, "关键字描叙");
+        BaseMod.addKeyword(new String[]{"关键字", "关键字"}, "关键字描叙");
         //文本描叙需要使用到关键字时，请将关键字格式前后加一个空格。
         //例： DESCRIPTION = "这个位置有一个 关键字 需要体现。";
 
@@ -120,11 +120,12 @@ public class CoreMod implements PostInitializeSubscriber, EditCharactersSubscrib
 
         logger.info("=========================加载遗物文本信息成功========================");
     }
+
     //ModTheSpire正常启动mod后，在主界面里多出一项Mods选项来显示启用的Mod信息。以上部分为填写被显示的信息。
     public void receivePostInitialize() {
         Texture badgeTexture = new Texture("mod图标路径");
         ModPanel settingsPanel = new ModPanel();
-     //   settingsPanel.addLabel("config里的mod描叙", 400.0f, 700.0f, (me) -> {});
+        //   settingsPanel.addLabel("config里的mod描叙", 400.0f, 700.0f, (me) -> {});
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         Settings.isDailyRun = false;
