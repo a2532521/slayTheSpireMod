@@ -1,3 +1,3 @@
- mvn install:install-file -Dfile=D:/slayTheSpire/MKB-Mod/src/lib/desktop-1.0.jar -DgroupId=desktop-root -DartifactId=desktop -Dversion=1 -Dpackaging=jar
- mvn install:install-file -Dfile=D:/slayTheSpire/MKB-Mod/src/lib/BaseMod.jar -DgroupId=BaseMod-root -DartifactId=basemod -Dversion=1 -Dpackaging=jar
- mvn install:install-file -Dfile=D:/slayTheSpire/MKB-Mod/src/lib/ModTheSpire.jar -DgroupId=modTheSpire-root -DartifactId=modTheSpire -Dversion=1 -Dpackaging=jar
+ mvn install:install-file -Dfile=D:/Slay_The_Spire/slayTheSpireMod/src/lib/desktop-1.0.jar -DgroupId=desktop-root -DartifactId=desktop -Dversion=1 -Dpackaging=jar
+ mvn install:install-file -Dfile=D:/Slay_The_Spire/slayTheSpireMod/src/lib/BaseMod.jar -DgroupId=BaseMod-root -DartifactId=basemod -Dversion=1 -Dpackaging=jar
+ mvn install:install-file -Dfile=D:/Slay_The_Spire/slayTheSpireMod/src/lib/ModTheSpire.jar -DgroupId=modTheSpire-root -DartifactId=modTheSpire -Dversion=1 -Dpackaging=jar
