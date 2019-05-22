@@ -17,4 +17,7 @@ public class AbstractCardEnum {
 
     @SpireEnum
     public static AbstractCard.CardColor QUEEN;
+
+    @SpireEnum
+    public static AbstractCard.CardColor BELIEF ;
 }
