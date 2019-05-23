@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-public class DualismRelics extends CustomRelic {
+public class TheFoolRelics  extends CustomRelic {
     //遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
-    public static final String ID = "Dualism";
+    public static final String ID = "TheFool";
     //遗物图片路径
     public static final String IMG = "遗物图片路径";
     //遗物外轮廓路径
@@ -24,20 +24,34 @@ public class DualismRelics extends CustomRelic {
     //         例：public static final DESCRIPTION = "回合开始时获得 #b3 点力量.";
     //       2.文本描叙中[R]、[G]、[B]分别对应战士、猎手、机器人的能量。
     //         使用方法同上，不再赘叙。
-    public static final String DESCRIPTION = "二元";//遗物效果的文本描叙。
+    public static final String DESCRIPTION = "The Fool";//遗物效果的文本描叙。
+    //遗物种类：
+    // RelicTier.BOSS-boss遗物,
+    // RelicTier.COMMON-一般遗物,
+    // RelicTier.RARE-罕见遗物,
+    // RelicTier.SHOP-商店遗物,
+    // RelicTier.SPECIAL-事件遗物,
+    // RelicTier.STARTER-初始遗物,
+    // RelicTier.UNCOMMON-稀有遗物。
+    public static final RelicTier RelicType =  RelicTier.STARTER;
+
+    //遗物音效：
+    // LandingSound.CLINK,
+    // LandingSound.FLAT,
+    // LandingSound.HEAVY,
+    // LandingSound.MAGICAL,
+    // LandingSound.SOLID  具体音效请到游戏内听。
+    public static final LandingSound landingSound =LandingSound.FLAT;
 
 
-    private static int evil = 0 ;
-    private static int holy = 0;
+    // private static int evil = 0 ;
+    // private static int holy = 0;
 
-
-    public DualismRelics(){
-        //参数：ID-遗物Id，new Texture(Gdx.files.internal(IMG))-遗物图片，new Texture(Gdx.files.internal(OUTLINE))-遗物轮廓，
-        //RelicTier.BOSS-遗物种类，LandingSound.FLAT-遗物音效。
-        //遗物种类：RelicTier.BOSS-boss遗物, RelicTier.COMMON-一般遗物, RelicTier.RARE-罕见遗物, RelicTier.SHOP-商店遗物, RelicTier.SPECIAL-事件遗物, RelicTier.STARTER-初始遗物, RelicTier.UNCOMMON-稀有遗物。
-        //遗物音效：LandingSound.CLINK,LandingSound.FLAT,LandingSound.HEAVY,LandingSound.MAGICAL,LandingSound.SOLID  具体音效请到游戏内听。
-        super(ID, new Texture(Gdx.files.internal(IMG)), new Texture(Gdx.files.internal(OUTLINE)), RelicTier.BOSS, LandingSound.FLAT);
+    public TheFoolRelics(String id, Texture texture, RelicTier tier, LandingSound sfx) {
+        //参数：ID-遗物Id，new Texture(Gdx.files.internal(IMG))-遗物图片，new Texture(Gdx.files.internal(OUTLINE))-遗物轮廓，RelicTier.BOSS-遗物种类，LandingSound.FLAT-遗物音效。
+        super(ID, new Texture(Gdx.files.internal(IMG)), new Texture(Gdx.files.internal(OUTLINE)), RelicType, landingSound);
     }
+
 
     public String getUpdatedDescription() {
         return DESCRIPTION;
@@ -140,5 +154,4 @@ public class DualismRelics extends CustomRelic {
 
     public void onDrawOrDiscard() {
     }//触发时机：当玩家抽卡或者弃卡时。
-
 }

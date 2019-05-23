@@ -148,7 +148,8 @@ public class WiteCard extends CustomCard {
     public void triggerOnExhaust() {
     }
 
-    //触发时机较为复杂。官方用用途之一为抽到卡时更新卡面描叙。方法内两句需连用。如果需要恢复原文本，则在上方的卡牌被丢进抽牌堆的时机内this.rewDescription = 原文本;this.initializeDescription();即可。
+    //触发时机较为复杂。官方用用途之一为抽到卡时更新卡面描叙。方法内两句需连用。
+    // 如果需要恢复原文本，则在上方的卡牌被丢进抽牌堆的时机内this.rewDescription = 原文本;this.initializeDescription();即可。
     public void applyPowers() {
         this.rawDescription = "修改后的文本";
         this.initializeDescription();

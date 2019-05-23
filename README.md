@@ -1,5 +1,5 @@
 # slayTheSpireMod
-角色
+角色  theFool
 --------------------------------------------------------------------
 生命  100点
 
@@ -88,6 +88,40 @@
 别西卜:Beelzebub：饕餮（苍蝇王，圣经中的鬼王）
 利维坦:Leviathan：妒忌 （迦南传说中的海怪）
 贝利尔：Beliel：懒惰（犹太魔神）
+
+
+生命=HP（health point)
+速度=SD(有些是SP或者S)(speed)
+攻击=ATK(attack)
+防御=DEF(defence)
+
+随机
+
+Tarot
+
+【0】愚者（The Fool，0)
+【1】魔术师（The Magician，I)
+【2】女祭司（The High Priestess，II)
+【3】女皇（The Empress，III)
+【4】皇帝（The Emperor，IV)
+【5】教皇（The Hierophant，or the Pope，V)
+【6】恋人（The Lovers，VI)
+【7】战车（The Chariot，VII)
+【8】力量（Strength，VIII）
+【9】隐者（The Hermit，IX)
+【10】命运之轮（The Wheel of Fortune，X)
+【11】正义（Justice，XI）
+【12】倒吊人（The Hanged Man，XII)
+【13】 死神（Death，XIII)
+【14】节制（Temperance，XIV)
+【15】恶魔（The Devil ，XV)
+【16】塔（The Tower，XVI)
+【17】星星（The Star，XVII)
+【18】月亮（The Moon，XVIII)
+【19】太阳（The Sun，XIX)
+【20】审判（Judgement，XX)
+【21】世界（The World，XXI)
+
 
 ---------------------------------------------------------------------
 人物

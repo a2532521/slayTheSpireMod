@@ -20,4 +20,9 @@ public class AbstractCardEnum {
 
     @SpireEnum
     public static AbstractCard.CardColor BELIEF ;
+    /**
+     * 塔罗
+     */
+    @SpireEnum
+    public static AbstractCard.CardColor TAROT ;
 }
